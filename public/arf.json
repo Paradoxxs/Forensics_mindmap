@@ -1,0 +1,89 @@
+{
+  "children": [
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "Program execution",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "Deleted file or file knowledge",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "Network activity/Physical location",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "File/Folder opening",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "Account usage",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+  
+      }],
+      "name": "External device/USB usage",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+        "children":[
+        {
+        }],
+        "name": "Internet explore",
+        "type": "folder"
+      },
+      {
+        "children":[
+        {
+        }],
+        "name": "Chrome",
+        "type": "folder"
+      },
+      {
+        "children":[
+         { 
+         }],
+         "name": "Firefox",
+         "type": "folder"
+      }
+    
+    ],
+      "name": "Browser usage",
+      "type": "folder"
+    },
+    {
+      "children": [
+      {
+      }],
+      "name": "File download",
+      "type": "folder"
+
+    }],
+    "name": "Windows forensics",
+    "type": "folder"
+}
