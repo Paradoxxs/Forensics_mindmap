@@ -346,7 +346,17 @@
         }],
       "name": "File download",
       "type": "folder"
-
+    
+    },
+    {
+      "children": [
+        {
+          "name":"Shadow copy",
+          "description": "Backup of previous vesion of the system",
+          "path":"vssadmin list shadowstorage"
+        }],
+        "name":"Backups",
+        "type":"folder"
     }],
     "name": "Windows forensics",
     "type": "folder"
