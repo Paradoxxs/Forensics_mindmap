@@ -114,6 +114,10 @@
             }],
          "name": "Firefox",
          "type": "folder"
+      },
+      {
+        "name":"Super cookies",
+        "path":"%APPDATA%\\Roaming\\Macromedia\\FlashPlayer\\#SharedObjects\\<randomprofileid>"
       }
     
     ],
