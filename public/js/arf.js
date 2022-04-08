@@ -30,18 +30,13 @@ d3.json("arf.json", function(json) {
     }
   }
 
-/*  function toggleAll(d) {
-    if (d.children) {
-      d.children.forEach(toggleAll);
-      toggle(d);
-    }
-  } */
+
   root.children.forEach(collapse);
   update(root);
 });
 
 function update(source) {
-  // var duration = d3.event && d3.event.altKey ? 5000 : 500;
+
 
   // Compute the new tree layout.
   var nodes = tree.nodes(root).reverse();
@@ -72,8 +67,17 @@ function update(source) {
       .attr("text-anchor", function(d) { return d.children || d._children ? "end" : "start"; })
       .text(function(d) { return d.name; })
       .style("fill: rgb(0, 0, 0)", function(d) { return d.free ? 'black' : '#999'; })
-      .style("fill-opacity", 1e-6);
+      .style("fill-opacity", 1e-6)
 
+  node.append("text")
+      .attr("x", 8)
+      .attr("y", 8)
+      .attr("dy", ".71em")
+      .attr("class", "about lifespan")
+      .text(function(d) { return d.path; });
+
+
+      
   nodeEnter.append("svg:title")
     .text(function(d) {
       return d.description;
@@ -137,6 +141,9 @@ function update(source) {
     d.x0 = d.x;
     d.y0 = d.y;
   });
+
+
+
 }
 
 // Toggle children.
@@ -149,3 +156,5 @@ function toggle(d) {
     d._children = null;
   }
 }
+
+

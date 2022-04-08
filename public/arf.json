@@ -53,21 +53,65 @@
       {
         "children":[
         {
-        }],
-        "name": "Internet explore",
+        "name": "History",
+        "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\WebCache\\WebCacheV*.dat"
+        },
+        {
+          "name": "Cookies",
+          "path": "%USERPROFILE%\\AppData\\Local\\Packages\\microsoft.microsoftedge_<APPID>\\AC\\MicrosoftEdge\\Cookies"
+        },
+        {
+          "name": "Cache",
+          "path": "%USERPROFILE%\\AppData\\Local\\Packages\\microsoft.microsoftedge_<APPID>\\AC\\MicrosoftEdge\\Cache"
+        },
+        {
+          "name": "Session",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Internet Explorer\\Recovery"
+        }
+
+      ],
+        "name": "Internet explore (Egde)",
         "type": "folder"
       },
       {
         "children":[
-        {
-        }],
+          {
+            "name": "History",
+            "path": "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History"
+            },
+            {
+              "name": "Cookies",
+              "path": "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Local Storage\\"
+            },
+            {
+              "name": "Cache",
+              "path": "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cache\\ - data_# and f_######"
+            },
+            {
+              "name": "Session",
+              "path": "%USERPROFILE%\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\"
+            }],
         "name": "Chrome",
         "type": "folder"
       },
       {
         "children":[
-         { 
-         }],
+          {
+            "name": "History",
+            "path": "%USERPROFILE%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<random text>.default\\places.sqlite"
+            },
+            {
+              "name": "Cookies",
+              "path": "%USERPROFILE%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\cookies.sqlite"
+            },
+            {
+              "name": "Cache",
+              "path": "%USERPROFILE%\\AppData\\Local\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\Cache"
+            },
+            {
+              "name": "Session",
+              "path": "%USERPROFILE%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\sessionstore.js"
+            }],
          "name": "Firefox",
          "type": "folder"
       }
