@@ -2,48 +2,237 @@
   "children": [
     {
       "children": [
-      {
-  
-      }],
+        {
+          "name": "UserAssits",
+          "description" : "GUI-based programs launched from the desktop",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\Currentversion\\Explorer\\UserAssist\\{GUID}\\Count"
+        },
+        {
+          "name": "Windows 10 Timeline",
+          "description" : "records recently used applications and files in a timeline",
+          "path": "C:\\Users\\<profile>\\AppData\\Local\\ConnectedDevicesPlatform\\<random-name-folder>\\ActivitiesCache.db"
+        },
+        {
+          "name": "BAM/DAM",
+          "description" : "records recently used applications and files in a timeline",
+          "path": "SYSTEM\\CurrentControlSet\\Services\\{bam or dam}\\UserSettings\\{SID}"
+        },
+        {
+          "name": "shimcache",
+          "description" : "Any executable run on the Windows system could be found in this key",
+          "path": "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\AppCompatCache"
+        },
+        {
+          "name": "Amcache.hve",
+          "description" : "ProgramDataUpdater (a task associated with the Application Experience Service) uses the registry file Amcache.hve to store data during process creation",
+          "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
+        },
+        {
+          "name": "System Resource Usage Monitor(SRUM)",
+          "description" : "Records 30 to 60 days of historical system performance",
+          "path": "SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\SRUM\\Extensions {d10ca2fe-6fcf4f6d-848e-b2e99266fa89} = Application Resource Usage Provider C:\\Windows\\System32\\SRU\\"
+        },
+        {
+          "name": "Jump lists",
+          "description" : "https://dfir.to/EZjumpList",
+          "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations"
+        },
+        {
+          "name": "Last-Visited MRU",
+          "description" : "Tracks the specific executable used by an application to open the files",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRU"
+        },
+        {
+          "name": "Prefetch",
+          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each",
+          "path": "C:\\Windows\\Prefetch"
+        }],
       "name": "Program execution",
       "type": "folder"
     },
     {
       "children": [
-      {
-  
-      }],
+        {
+          "name": "Last-Visited MRU",
+          "description" : "Tracks the specific executable used by an application to open the files",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRU"
+        },
+        {
+          "name": "IE|Edge file://",
+          "description" : "The history also records local and remote (via network shares) does not mean the file was opened in browser",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\WebCache\\WebCacheV*.dat"
+        },
+        {
+          "name": "Thumbcache",
+          "description" : "Thumbnails of pictures, office documents, and folders",
+          "path": "C:\\%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\Explorer"
+        },
+        {
+          "name": "Thumbs.db",
+          "description" : "Thumbnails of pictures, office documents, and folders",
+          "path": "Automatically created anywhere and accessed via a UNC Path(local or remote)"
+        },
+        {
+          "name": "Search – WordWheelQuery",
+          "description" : "Keywords searched for from the START menu bar",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\WordWheelQuery"
+        }],
       "name": "Deleted file or file knowledge",
       "type": "folder"
     },
     {
       "children": [
-      {
-  
-      }],
+        {
+          "name": "Timezone",
+          "path": "SYSTEM\\CurrentControlSet\\Control\\TimeZoneInformation"
+        },
+        {
+          "name": "Network History",
+          "description" : "Identify networks that the computer has been connected to",
+          "path": "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Signatures\\{Unmanaged or Managed} | SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Nla\\Cache"
+        },
+        {
+          "name": "WLAN Event Log",
+          "description" : "Identify networks that the computer has been connected to",
+          "path": "Microsoft-Windows-WLAN-AutoConfig Operational.evtx"
+        }],
       "name": "Network activity/Physical location",
       "type": "folder"
     },
     {
       "children": [
-      {
-  
-      }],
+        {
+          "name": "Last-Visited MRU",
+          "description" : "Tracks the specific executable used by an application to open the files",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\LastVisitedPidlMRU"
+        },
+        {
+          "name": "IE|Edge file://",
+          "description" : "The history also records local and remote (via network shares) does not mean the file was opened in browser",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\WebCache\\WebCacheV*.dat"
+        },
+        {
+          "name": "Shortcut (LNK)",
+          "description" : "last drive letter of the USB",
+          "path": "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent and %USERPROFILE%\\AppData\\Roaming\\Microsoft\\O¯ce\\Recent"
+        },
+        {
+          "name": "Jump lists",
+          "description" : "https://dfir.to/EZjumpList",
+          "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations"
+        },
+        {
+          "name":"Open/Save MRU",
+          "description": "tracks files that have been opened or saved within a Windows shell dialog box",
+          "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
+        },
+        {
+          "name": "Prefetch",
+          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each",
+          "path": "C:\\Windows\\Prefetch"
+        },
+        {
+          "name": "Office Recent Files",
+          "description" : "MS Office programs will track their own Recent Files",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Office\\VERSION\\UserMRU\\LiveID_####\\FileMRU"
+        },
+        {
+          "name": "Shell Bags",
+          "description" : "Which folders were accessed on the local machine, the network, and/or removable devices",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\Shell\\{Bags or BagMRU}"
+        },
+        {
+          "name": "Shell Bags (Explore)",
+          "description" : "Which folders were accessed on the local machine, the network, and/or removable devices",
+          "path": "USRCLASS.DAT\\Local Settings\\Software\\Microsoft\\Windows\\Shell\\{Bags or BagMRU}"
+        },
+        {
+          "name": "Recent Files",
+          "description" : "Registry Key that will track the last files and folders opened and is used to populate data in “Recent” menus of the Start menu",
+          "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs"
+        }
+
+
+
+      ],
       "name": "File/Folder opening",
       "type": "folder"
     },
     {
       "children": [
-      {
-  
-      }],
+        {
+          "name": "last login",
+          "description" : "local account of the system",
+          "path": "C:\\windows\\system32\\config\\SAM and SAM\\Domains\\Account\\Users"
+        },
+        {
+          "name": "last password change",
+          "path": "C:\\windows\\system32\\config\\SAM and SAM\\Domains\\Account\\Users"
+        },
+        {
+          "name": "RDP usage",
+          "description" : "RDP lons to target machine, Event ID 4778 and 4779",
+          "path": "%SYSTEM ROOT%\\System32\\winevt\\logs\\Security.evtx"
+        },
+        {
+          "name": "Authentication Events",
+          "description" : "4776: Successful/Failed account authentication",
+          "path": "%SYSTEM ROOT%\\System32\\winevt\\logs\\Security.evtx"
+        },
+        {
+          "name": "Success/Fail Logons ",
+          "description" : "4624 success, 4634 |4647 logoff",
+          "path": "%SYSTEM ROOT%\\System32\\winevt\\logs\\Security.evtx"
+        }],
       "name": "Account usage",
       "type": "folder"
     },
     {
       "children": [
       {
-  
+        "name": "Key identification",
+        "path": "SYSTEM\\CurrentControlSet\\Enum\\{ USB or USBSTOR}"
+      },
+      {
+        "name": "Plug and play logs",
+        "path": "C:\\Windows\\inf\\setupapi.dev.log"
+      },
+      {
+        "name": "First install",
+        "path": "System Hive:\\CurrentControlSet\\Enum\\USBSTOR\\Ven_Prod_Version\\USBSerial#\\Properties\\{83da6326-97a6-4088-9453-a19231573b29\\0064"
+      },
+      {
+        "name": "Last Connected",
+        "path": "System Hive:\\CurrentControlSet\\Enum\\USBSTOR\\Ven_Prod_Version\\USBSerial#\\Properties\\{83da6326-97a6-4088-9453-a19231573b29\\0066"
+      },
+      {
+        "name": "Removal times",
+        "path": "System Hive:\\CurrentControlSet\\Enum\\USBSTOR\\Ven_Prod_Version\\USBSerial#\\Properties\\{83da6326-97a6-4088-9453-a19231573b29\\0067"
+      },
+      {
+        "name": "User of USB device",
+        "description" : "Find User that used the Unique USB Device. Look for GUID from SYSTEM\\MountedDevices",
+        "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\MountPoints2"
+      },
+      {
+        "name": "PNP Events",
+        "description" : "Event ID: 20001 – Plug and Play driver install attempted",
+        "path": "%system root%\\System32\\winevt\\logs\\System.evtx"
+      },
+      {
+        "name": "Volume serial number",
+        "description" : "Discover the Volume Serial Number",
+        "path": "SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\ENDMgm"
+      },
+      {
+        "name": "Drive letter and volume name",
+        "description" : "last drive letter of the USB",
+        "path": "SOFTWARE\\Microsoft\\Windows Portable Devices\\Devices and SYSTEM\\MountedDevices"
+      },
+      {
+        "name": "Shortcut (LNK)",
+        "description" : "last drive letter of the USB",
+        "path": "%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent and %USERPROFILE%\\AppData\\Roaming\\Microsoft\\O¯ce\\Recent"
       }],
       "name": "External device/USB usage",
       "type": "folder"
@@ -67,6 +256,14 @@
         {
           "name": "Session",
           "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Internet Explorer\\Recovery"
+        },
+        {
+          "name": "Browser Search Terms",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\WebCache\\WebCacheV*.dat"
+        },
+        {
+          "name": "Downloads",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Windows\\WebCache\\WebCacheV*.dat"
         }
 
       ],
@@ -111,6 +308,18 @@
             {
               "name": "Session",
               "path": "%USERPROFILE%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\sessionstore.js"
+            },
+            {
+              "name": "Browser Search Terms",
+              "path": "%userprofile%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\places.sqlite"
+            },
+            {
+              "name": "Browser Search Terms",
+              "path": "%userprofile%\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<randomtext>.default\\places.sqlite"
+            },
+            {
+              "name": "Downloads",
+              "path": "%userprofile%\\AppData\\Roaming\\Mozilla\\ Firefox\\Profiles\\<random text>.default\\downloads.sqlite"
             }],
          "name": "Firefox",
          "type": "folder"
@@ -126,8 +335,15 @@
     },
     {
       "children": [
-      {
-      }],
+        {
+          "name":"Open/Save MRU",
+          "description": "tracks files that have been opened or saved within a Windows shell dialog box",
+          "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
+        },
+        {
+          "name":"Email attachments",
+          "path": "%USERPROFILE%\\AppData\\Local\\Microsoft\\Outlook"
+        }],
       "name": "File download",
       "type": "folder"
 
