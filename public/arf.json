@@ -25,6 +25,7 @@
         {
           "name": "Amcache.hve",
           "description" : "ProgramDataUpdater (a task associated with the Application Experience Service) uses the registry file Amcache.hve to store data during process creation",
+          "Timestamps": "First Run Time = Last Modification Time of Key",
           "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
         },
         {
@@ -44,8 +45,14 @@
         },
         {
           "name": "Prefetch",
-          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each",
+          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
+          "Timestamps" : "Date created = first executed, Date modified = last executed",
           "path": "C:\\Windows\\Prefetch"
+        },
+        {
+          "name": "RecentApps",
+          "description" : "Program execution on win10 system is tracked in recentapps key",
+          "path": "NTUSER.dat\\Software\\Microsoft\\Windows\\Current Version\\Search\\RecentApps"
         }],
       "name": "Program execution",
       "type": "folder"
@@ -128,7 +135,8 @@
         },
         {
           "name": "Prefetch",
-          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each",
+          "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
+          "Timestamps" : "Date created = first executed, Date modified = last executed",
           "path": "C:\\Windows\\Prefetch"
         },
         {
@@ -356,6 +364,31 @@
           "path":"vssadmin list shadowstorage"
         }],
         "name":"Backups",
+        "type":"folder"
+    },
+    {
+      "children": [
+        {
+          "name":"Hibernation files",
+          "description": "Compressed RAM image",
+          "path":"%SystemDrive%\\hiberfile.sys"
+        },
+        {
+          "name":"Page files",
+          "description": "Compressed RAM image",
+          "path":"%SystemDrive%\\pagefile.sys"
+        },
+        {
+          "name":"swap files",
+          "description": "Compressed RAM image",
+          "path":"%SystemDrive%\\pagefile.sys"
+        },
+        {
+          "name":"memory dump files",
+          "description": "RAM dump image",
+          "path":"%windir\\memory.dmp"
+        }],
+        "name":"Memory",
         "type":"folder"
     }],
     "name": "Windows forensics",
