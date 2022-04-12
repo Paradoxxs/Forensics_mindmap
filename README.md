@@ -1,3 +1,5 @@
 # Windows-forensics-framework
 Windows forensics framework
-Based on the osint framework
+Tree structure view to allow for quick location of forensics evidence
+
+inspired by the osint framework
