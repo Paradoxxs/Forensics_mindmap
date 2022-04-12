@@ -27,7 +27,7 @@ ForEach ($Path in $paths)
 
 Get-ChildItem $path.fullname -Recurse |foreach{
 
-Compress-Archive -Path $_.FullName -DestinationPath "C:\$($path.name).zip" -update -CompressionLevel Optimal
+Compress-Archive -Path $_.FullName -DestinationPath "C:\triage_iamge.zip" -update -CompressionLevel Optimal
 
  }
 }
