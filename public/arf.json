@@ -102,6 +102,11 @@
           "name": "WLAN Event Log",
           "description" : "Identify networks that the computer has been connected to",
           "path": "Microsoft-Windows-WLAN-AutoConfig Operational.evtx"
+        },
+        {
+          "name": "Network shares",
+          "description": "Event ID 5140 - 5145",
+          "path":"windows\\system32\\winevt\\logs\\security.evtx"
         }],
       "name": "Network activity/Physical location",
       "type": "folder"
@@ -179,7 +184,7 @@
         },
         {
           "name": "RDP usage",
-          "description" : "RDP lons to target machine, Event ID 4778 and 4779",
+          "description" : "RDP logons, will also contain info on source hostname, Event ID 4778 and 4779",
           "path": "%SYSTEM ROOT%\\System32\\winevt\\logs\\Security.evtx"
         },
         {
@@ -394,13 +399,23 @@
     {
       "children": [
         {
-          "name":"Powershell history"
-          "path":"%AppData%\Roaming\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt"
+          "name":"Powershell history",
+          "path":"%AppData%\\Roaming\\Microsoft\\Windows\\PowerShell\\PSReadLine\\ConsoleHost_history.txt"
         },
         {
           "name":"WMI databse",
-          "Description":"objects.data = object managed by WMI, index.btr = binary tree index, Mapping* = correlated data,
-          "path":"%systemroot%\system32\wbem\repository"
+          "Description":"objects.data = object managed by WMI, index.btr = binary tree index, Mapping* = correlated data",
+          "path":"%systemroot%\\system32\\wbem\\repository"
+        },
+        {
+          "name": "Command line evt",
+          "Description":"Event Id : Security 4688 | powershell/operational 4103 - 4106",
+          "path":"Windows\\system32\\winevt\\logs\\{security | Powershell/operational}"
+        },
+        {
+          "name":"WMI evt",
+          "Description":"Event Id : Security 4688 | powershell/operational 4103 - 4106",
+          "path":"Windows\\system32\\winevt\\logs\\{security | Powershell/operational}"
         }],
         "name":"Command",
         "type":"folder"
@@ -408,24 +423,47 @@
       {
       "children": [
         {
-          "name":"startup folder"
-          "path":"%userprofile%\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
+          "name":"startup folder",
+          "path":"%userprofile%\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup"
         },
         {
           "name":"startup registry",
-          "path":"HKCU\Software\Microsoft\Windows\CurrentVersion\{Run or Runonce}"
+          "path":"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\{Run or Runonce}"
         },
               {
-          "name":"startup registry 2"
-          "path":"HKCU\Software\microsoft\windows\currentversion\policies\explorer\run"
+          "name":"startup registry 2",
+          "path":"HKCU\\Software\\microsoft\\windows\\currentversion\\policies\\explorer\run"
         },
         {
-          "name":"startup registry 3"
-          "path":"HKCU\Software\microsoft\windows NT\CurrentVersion\winlogon\userinit"
+          "name":"startup registry 3",
+          "path":"HKCU\\Software\\microsoft\\windows NT\\CurrentVersion\\winlogon\\userinit"
+        },
+        {
+         "name": "Scheduled task",
+         "Description": "Event ID 4698 (security) | task scheduler 106, 141 and 200",
+         "path" : "Windows\\system32\\winevt\\logs\\{security | task scheduler}"
+        },
+        {
+          "name":"Service evt",
+          "Description":"Event id : system 7034-7036, 7040, 7045 | security 4697",
+          "path": "Windows\\system32\\winevt\\logs\\{system | security}"
+          
         }],
         "name":"Persistance",
         "type":"folder"
-    }],
+    }
+    {
+      "children": [
+        {
+          "name":"Log clearing",
+          "Description":"Event ID : Security 1102 | System 104",
+          "path": "Windows\\system32\\winevt\\logs\\{security | system}"
+        }
+      ],
+      "name":"Evidence destruction",
+      "type":"fodler"    
+    }
+  ],
     "name": "Windows forensics",
     "type": "folder"
 }
