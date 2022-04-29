@@ -17,23 +17,124 @@ var vis = d3.select("#body").append("svg:svg")
   .append("svg:g")
     .attr("transform", "translate(" + margin[3] + "," + margin[0] + ")");
 
-d3.json("arf.json", function(json) {
-  root = json;
-  root.x0 = height / 2;
-  root.y0 = 0;
-
-  function collapse(d) {
-    if (d.children) {
-      d._children = d.children;
-      d._children.forEach(collapse);
-      d.children = null;
+  d3.json("window.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
     }
-  }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
 
+function windows() {
+  d3.json("window.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+}    
 
-  root.children.forEach(collapse);
-  update(root);
-});
+function android() {
+  d3.json("android.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+}    
+
+function ios() {
+  d3.json("ios.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+}    
+
+function mac() {
+  d3.json("mac.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
+
+function linux() {
+  d3.json("linux.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
+
 
 function update(source) {
 

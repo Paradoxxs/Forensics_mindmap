@@ -20,6 +20,7 @@
         {
           "name": "shimcache",
           "description" : "Any executable run on the Windows system could be found in this key",
+          "Timestamps": "Last modified data of the PE",
           "path": "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\AppCompatCache"
         },
         {
@@ -164,9 +165,6 @@
           "description" : "Registry Key that will track the last files and folders opened and is used to populate data in “Recent” menus of the Start menu",
           "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RecentDocs"
         }
-
-
-
       ],
       "name": "File/Folder opening",
       "type": "folder"
@@ -451,7 +449,7 @@
         }],
         "name":"Persistance",
         "type":"folder"
-    }
+    },
     {
       "children": [
         {
