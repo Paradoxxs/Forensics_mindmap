@@ -4,7 +4,8 @@
         "children": [
           {
             "name": "UserAssits",
-            "description" : "GUI-based programs launched from the desktop",
+            "description" : "GUI-based programs launched from the desktop, All values are ROT-13 encoded",
+            "Timestamps":"Last run time (UTC), focus time in ms, last write time for the key is likely the first time a program was executed",
             "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\Currentversion\\Explorer\\UserAssist\\{GUID}\\Count"
           },
           {
@@ -13,9 +14,16 @@
             "path": "C:\\Users\\<profile>\\AppData\\Local\\ConnectedDevicesPlatform\\<random-name-folder>\\ActivitiesCache.db"
           },
           {
-            "name": "BAM/DAM",
+            "name": "Background activity moderator (BAM)",
             "description" : "records recently used applications and files in a timeline",
-            "path": "SYSTEM\\CurrentControlSet\\Services\\{bam or dam}\\UserSettings\\{SID}"
+            "Timestamps":"Last execution date",
+            "path": "SYSTEM\\CurrentControlSet\\Services\\bam\\UserSettings\\{SID}"
+          },
+          {
+            "name": "Desktop activity moderator (DAM)",
+            "description" : "records recently used applications and files in a timeline",
+            "Timestamps":"Last execution date",
+            "path": "SYSTEM\\CurrentControlSet\\Services\\dam\\UserSettings\\{SID}"
           },
           {
             "name": "shimcache",
@@ -25,7 +33,7 @@
           },
           {
             "name": "Amcache.hve",
-            "description" : "ProgramDataUpdater (a task associated with the Application Experience Service) uses the registry file Amcache.hve to store data during process creation",
+            "description" : "Program execution, {Volume guid} is paired up with the mountedevices key found in system\\mounteddevices. Value names are in hex (0:17,100,101) paired to a name",
             "Timestamps": "First Run Time = Last Modification Time of Key",
             "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
           },
@@ -52,7 +60,8 @@
           },
           {
             "name": "RecentApps",
-            "description" : "Program execution on win10 system is tracked in recentapps key",
+            "description" : "Track execution of GUI based application and recent file opened by that application",
+            "Timestamps":"LastaccessTIme = last execution time in UTC",
             "path": "NTUSER.dat\\Software\\Microsoft\\Windows\\Current Version\\Search\\RecentApps"
           }],
         "name": "Program execution",
@@ -124,7 +133,11 @@
             "description": "Identify the type of network the computer was connected to, will store the SSID of previous wireless, 0x47 wireless, 0x06 wired, 0x17 broadband",
             "timestamp": "localtime",
             "path":"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Profiles"
-          }],
+          },
+        {
+          "name":"IP address",
+          "path":"SYSTEM\\currentcontrolset\\services\\tcpip\\parameters\\interfaces\\{GUID}"
+        }],
         "name": "Network activity/Physical location",
         "type": "folder"
       },
@@ -443,6 +456,11 @@
             "name":"WMI evt",
             "Description":"Event Id : Security 4688 | powershell/operational 4103 - 4106",
             "path":"Windows\\system32\\winevt\\logs\\{security | Powershell/operational}"
+          },
+          {
+            "name":"Last command executed",
+            "Description":"Command executed executed from run",
+            "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU  "
           }],
           "name":"Command",
           "type":"folder"
@@ -537,7 +555,7 @@
           {
             "name":"Shutdown",
             "Description":"System last shutdown time",
-            "timestamp":"Windows 64-bit time",
+            "timestamp":"Hex encoded - Windows 64-bit time",
             "path": "SYSTEM\\CurrentControlSet\\control\\windows"
           }
         ],
