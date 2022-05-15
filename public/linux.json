@@ -1,1 +1,102 @@
+{
+    "children": [
+    {
+        "children": [
+        {
+            "name":"netstats",
+            "path":"netstat -antp"
+        },
+        {
+            "name":"Network logs",
+            "path":"/var/log/messages"
+        }],
+        "name":"Network",
+        "type":"folder"
+        
+    },
+    {
+    "children": [
+        {
+            "name":"Process",
+            "path":"ps axuf or pstree"
+        },
+        {
+            "name":"SGID"
+        },
+        {
+            "name":"SUID"
+        }],
+        "name":"File execution & information",
+        "type":"folder"
+    },
+    {
+    "children": [
+        {
+
+        }],
+        "name":"User activity",
+        "type":"folder"
+    },
+    {
+    "children": [
+        {
+            "name":"boot logs",
+            "descritpion":"Contains info about boot",
+            "path":"/var/log/boot.log"
+        },
+        {
+            "name":"Kernel logs",
+            "descritpion":"",
+            "path":"/var/log/kern"
+            
+        },
+        {
+            "name":"Version",
+            "descritpion":"",
+            "path":"/boot or /etc/issue"
+            
+        },
+        {
+            "name":"system activity logs",
+            "descritpion":"Track non-kernel error, app service error and log at system startup",
+            "path":"/var/log/message"
+            
+        }],
+        "name":"System info",
+        "type":"folder"
+    },
+    {
+        "children": [
+            {
+                "name":"Cron jobs",
+                "description":"Allow for script, command, binaries, etc to be executed within a define interval. ",
+                "path":"/etc/cron*"
+                
+            }],
+            "name":"Persistance",
+            "type":"folder"
+        },
+        {
+        "children": [
+            {
+    
+            }],
+            "name":"other",
+            "type":"folder"
+        },
+        {
+        "children": [
+            {
+                "name":"dmesg",
+                "description":"Contains messaging that identifies gadget drivers. The order dmesg can be utilized to see messages in this record.",
+                "path":"/var/log/dmesg"
+                
+            }],
+            "name":"External",
+            "type":"folder"
+        }
+    ],  
+    "name": "Linux forensics",
+    "type": "folder"
+}
 

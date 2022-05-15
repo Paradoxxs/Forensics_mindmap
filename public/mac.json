@@ -1,1 +1,56 @@
+{
+    "children": [
+    {
+        "children": [
+        {
+
+        }],
+        "name":"Network",
+        "type":"folder"
+        
+    },
+    {
+    "children": [
+        {
+
+        }],
+        "name":"File execution",
+        "type":"folder"
+    },
+    {
+    "children": [
+        {
+
+        }],
+        "name":"User activity",
+        "type":"folder"
+    },
+    {
+    "children": [
+        {
+
+        }],
+        "name":"System info",
+        "type":"folder"
+    },
+    {
+        "children": [
+            {
+    
+            }],
+            "name":"Persistance",
+            "type":"folder"
+        },
+        {
+            "children": [
+                {
+        
+                }],
+                "name":"other",
+                "type":"folder"
+            }
+    ],  
+    "name": "Mac forensics",
+    "type": "folder"
+}
 
