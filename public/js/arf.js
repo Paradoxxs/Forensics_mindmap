@@ -135,6 +135,13 @@ function linux() {
   });
 } 
 
+function handleMouseOver() {
+    
+}
+
+function handleMouseOut() {
+    
+}
 
 function update(source) {
 
@@ -153,7 +160,9 @@ function update(source) {
   var nodeEnter = node.enter().append("svg:g")
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
-      .on("click", function(d) { toggle(d); update(d); });
+      .on("click", function(d) { toggle(d); update(d); })
+      .on("mouseover",handleMouseOver)
+      .on("mouseout",handleMouseOut);
 
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
