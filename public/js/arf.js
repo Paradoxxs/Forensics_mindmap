@@ -134,14 +134,63 @@ function linux() {
     update(root);
   });
 } 
+function osint() {
+  d3.json("osint.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
 
-function handleMouseOver() {
-    
-}
+function darkweb() {
+  d3.json("darkweb.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
 
-function handleMouseOut() {
-    
-}
+function Blockchain() {
+  d3.json("Blockchain.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
+
 
 function update(source) {
 
@@ -161,8 +210,6 @@ function update(source) {
       .attr("class", "node")
       .attr("transform", function(d) { return "translate(" + source.y0 + "," + source.x0 + ")"; })
       .on("click", function(d) { toggle(d); update(d); })
-      .on("mouseover",handleMouseOver)
-      .on("mouseout",handleMouseOut);
 
   nodeEnter.append("svg:circle")
       .attr("r", 1e-6)
@@ -184,14 +231,18 @@ function update(source) {
       .attr("y", 8)
       .attr("dy", ".71em")
       .attr("class", "about lifespan")
-      .text(function(d) { return d.path; });
+      .text(function(d) { return d.path; })
 
+  node.append("text")
+    .attr("x", 18)
+    .attr("y", 18)
+    .attr("dy", ".71em")
+    .attr("class", "about tool")
+    .text(function(d) { if (d.tool) return "tool: " + d.tool; });
 
       
   nodeEnter.append("svg:title")
-    .text(function(d) {
-      return d.description;
-    });
+    .text(function(d) {return d.description + '\n' + "tools: " +  d.tool + '\n' + "Time: "  +  d.time;})
 
   // Transition nodes to their new position.
   var nodeUpdate = node.transition()

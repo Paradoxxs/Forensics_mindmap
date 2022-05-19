@@ -5,7 +5,7 @@
           {
             "name": "UserAssits",
             "description" : "GUI-based programs launched from the desktop, All values are ROT-13 encoded",
-            "Timestamps":"Last run time (UTC), focus time in ms, last write time for the key is likely the first time a program was executed",
+            "times":"Last run time (UTC), focus time in ms, last write time for the key is likely the first time a program was executed",
             "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\Currentversion\\Explorer\\UserAssist\\{GUID}\\Count"
           },
           {
@@ -16,25 +16,25 @@
           {
             "name": "Background activity moderator (BAM)",
             "description" : "records recently used applications and files in a timeline",
-            "Timestamps":"Last execution date",
+            "times":"Last execution date",
             "path": "SYSTEM\\CurrentControlSet\\Services\\bam\\UserSettings\\{SID}"
           },
           {
             "name": "Desktop activity moderator (DAM)",
             "description" : "records recently used applications and files in a timeline",
-            "Timestamps":"Last execution date",
+            "times":"Last execution date",
             "path": "SYSTEM\\CurrentControlSet\\Services\\dam\\UserSettings\\{SID}"
           },
           {
             "name": "shimcache",
             "description" : "Any executable run on the Windows system could be found in this key",
-            "Timestamps": "Last modified data of the PE",
+            "times": "Last modified data of the PE",
             "path": "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\AppCompatCache"
           },
           {
             "name": "Amcache.hve",
             "description" : "Program execution, {Volume guid} is paired up with the mountedevices key found in system\\mounteddevices. Value names are in hex (0:17,100,101) paired to a name",
-            "Timestamps": "First Run Time = Last Modification Time of Key",
+            "times": "First Run Time = Last Modification Time of Key",
             "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
           },
           {
@@ -55,13 +55,13 @@
           {
             "name": "Prefetch",
             "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
-            "Timestamps" : "Date created = first executed, Date modified = last executed",
+            "times" : "Date created = first executed, Date modified = last executed",
             "path": "C:\\Windows\\Prefetch"
           },
           {
             "name": "RecentApps",
             "description" : "Track execution of GUI based application and recent file opened by that application",
-            "Timestamps":"LastaccessTIme = last execution time in UTC",
+            "times":"LastaccessTIme = last execution time in UTC",
             "path": "NTUSER.dat\\Software\\Microsoft\\Windows\\Current Version\\Search\\RecentApps"
           }],
         "name": "Program execution",
@@ -131,7 +131,7 @@
           {
             "name": "Network profile key - first and last time connection ",
             "description": "Identify the type of network the computer was connected to, will store the SSID of previous wireless, 0x47 wireless, 0x06 wired, 0x17 broadband",
-            "timestamp": "localtime",
+            "time": "localtime",
             "path":"SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\NetworkList\\Profiles"
           },
         {
@@ -166,25 +166,25 @@
           {
             "name":"Open/Save MRU",
             "description": "tracks files that have been opened or saved within a Windows shell dialog box",
-            "Timestamps":"Openend on",
+            "times":"Openend on",
             "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
           },
           {
             "name": "Prefetch",
             "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
-            "Timestamps" : "Date created = first executed, Date modified = last executed",
+            "times" : "Date created = first executed, Date modified = last executed",
             "path": "C:\\Windows\\Prefetch"
           },
           {
             "name": "Office Recent Files",
             "description" : "MS Office programs will track their own Recent Files",
-            "Timestamps": "Windows 64 hex value - big endian",
+            "times": "Windows 64 hex value - big endian",
             "path": "NTUSER.DAT\\Software\\Microsoft\\Office\\{VERSION}\\{app}\\UserMRU\\LiveID_####\\{FileMRU placeMRU}"
           },
           {
             "name": "Office reading location",
             "description" : "MS Office programs will track their own Recent Files",
-            "Timestamps": "Windows 64 hex value - big endian",
+            "times": "Windows 64 hex value - big endian",
             "path": "NTUSER.dat\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{app}\\Reading Locations\\"
           },
           {
@@ -211,13 +211,13 @@
           {
             "name": "last login",
             "description" : "local account of the system",
-            "timestamp" : "UCT",
+            "time" : "UCT",
             "tool": "saminsider",
             "path": "C:\\windows\\system32\\config\\SAM and SAM\\Domains\\Account\\Users"
           },
           {
             "name": "last password change",
-            "timestamp" : "UCT",
+            "time" : "UCT",
             "tool": "saminsider",
             "path": "C:\\windows\\system32\\config\\SAM and SAM\\Domains\\Account\\Users"
           },
@@ -390,7 +390,7 @@
           {
             "name":"Open/Save MRU",
             "description": "tracks files that have been opened or saved within a Windows shell dialog box",
-            "Timestamps":"Openend on",
+            "times":"Openend on",
             "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
           },
           {
@@ -526,7 +526,7 @@
           {
             "name":"OS version",
             "Description":"os version",
-            "timestamp": "unix timestamp seconds",
+            "time": "unix time seconds",
             "path": "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
           },
           {
@@ -544,7 +544,7 @@
           },
           {
             "name":"NTFS last access time on/off",
-            "Description":"Disabled means the last access timestamp will not be recorded in the NTFS file system. It means that you will not be able to see when data was last accessed by the system.",
+            "Description":"Disabled means the last access time will not be recorded in the NTFS file system. It means that you will not be able to see when data was last accessed by the system.",
             "path": "System\\currentControlSet\\Control\\Filesystem"
           },
           {
@@ -555,7 +555,7 @@
           {
             "name":"Shutdown",
             "Description":"System last shutdown time",
-            "timestamp":"Hex encoded - Windows 64-bit time",
+            "time":"Hex encoded - Windows 64-bit time",
             "path": "SYSTEM\\CurrentControlSet\\control\\windows"
           }
         ],
