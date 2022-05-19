@@ -5,7 +5,7 @@
           {
             "name": "UserAssits",
             "description" : "GUI-based programs launched from the desktop, All values are ROT-13 encoded",
-            "times":"Last run time (UTC), focus time in ms, last write time for the key is likely the first time a program was executed",
+            "time":"Last run time (UTC), focus time in ms, last write time for the key is likely the first time a program was executed",
             "path": "NTUSER.DAT\\Software\\Microsoft\\Windows\\Currentversion\\Explorer\\UserAssist\\{GUID}\\Count"
           },
           {
@@ -16,26 +16,14 @@
           {
             "name": "Background activity moderator (BAM)",
             "description" : "records recently used applications and files in a timeline",
-            "times":"Last execution date",
+            "time":"Last execution date",
             "path": "SYSTEM\\CurrentControlSet\\Services\\bam\\UserSettings\\{SID}"
           },
           {
             "name": "Desktop activity moderator (DAM)",
             "description" : "records recently used applications and files in a timeline",
-            "times":"Last execution date",
+            "time":"Last execution date",
             "path": "SYSTEM\\CurrentControlSet\\Services\\dam\\UserSettings\\{SID}"
-          },
-          {
-            "name": "shimcache",
-            "description" : "Any executable run on the Windows system could be found in this key",
-            "times": "Last modified data of the PE",
-            "path": "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\AppCompatCache"
-          },
-          {
-            "name": "Amcache.hve",
-            "description" : "Program execution, {Volume guid} is paired up with the mountedevices key found in system\\mounteddevices. Value names are in hex (0:17,100,101) paired to a name",
-            "times": "First Run Time = Last Modification Time of Key",
-            "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
           },
           {
             "name": "System Resource Usage Monitor(SRUM)",
@@ -55,13 +43,15 @@
           {
             "name": "Prefetch",
             "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
-            "times" : "Date created = first executed, Date modified = last executed",
+            "time" : "Date created = first executed, Date modified = last executed",
+            "MACB" : "A",
             "path": "C:\\Windows\\Prefetch"
           },
           {
             "name": "RecentApps",
             "description" : "Track execution of GUI based application and recent file opened by that application",
-            "times":"LastaccessTIme = last execution time in UTC",
+            "time":"LastaccessTIme = last execution time in UTC",
+            "MACB" : "A",
             "path": "NTUSER.dat\\Software\\Microsoft\\Windows\\Current Version\\Search\\RecentApps"
           }],
         "name": "Program execution",
@@ -98,6 +88,20 @@
             "name": "Typed path",
             "description" : "The path typed in the explorer address bar.",
             "path": "NTUSER.DAT\\software\\microsoft\\windows\\CurrentVersion\\Explorer\\TypedPaths"
+          },
+          {
+            "name": "shimcache",
+            "description" : "Any executable run on the Windows system could be found in this key",
+            "time": "Last modified date of the PE",
+            "MACB":"M",
+            "path": "SYSTEM\\CurrentControlSet\\Control\\Session Manager\\AppCompatCache"
+          },
+          {
+            "name": "Amcache.hve",
+            "description" : "Program execution, {Volume guid} is paired up with the mountedevices key found in system\\mounteddevices. Value names are in hex (0:17,100,101) paired to a name",
+            "time": "First Run Time = Last Modification Time of Key",
+            "MACB":"M",
+            "path": "C:\\Windows\\AppCompat\\Programs\\Amcache.hve"
           }],
         "name": "Deleted file or file knowledge",
         "type": "folder"
@@ -166,25 +170,25 @@
           {
             "name":"Open/Save MRU",
             "description": "tracks files that have been opened or saved within a Windows shell dialog box",
-            "times":"Openend on",
+            "time":"Openend on",
             "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
           },
           {
             "name": "Prefetch",
             "description" : "Increases performance of a system by pre-loading code pages of commonly used applications. Cache Manager monitors all files and directories referenced for each, disable on system with SSD",
-            "times" : "Date created = first executed, Date modified = last executed",
+            "time" : "Date created = first executed, Date modified = last executed",
             "path": "C:\\Windows\\Prefetch"
           },
           {
             "name": "Office Recent Files",
             "description" : "MS Office programs will track their own Recent Files",
-            "times": "Windows 64 hex value - big endian",
+            "time": "Windows 64 hex value - big endian",
             "path": "NTUSER.DAT\\Software\\Microsoft\\Office\\{VERSION}\\{app}\\UserMRU\\LiveID_####\\{FileMRU placeMRU}"
           },
           {
             "name": "Office reading location",
             "description" : "MS Office programs will track their own Recent Files",
-            "times": "Windows 64 hex value - big endian",
+            "time": "Windows 64 hex value - big endian",
             "path": "NTUSER.dat\\SOFTWARE\\Microsoft\\Office\\{VERSION}\\{app}\\Reading Locations\\"
           },
           {
@@ -258,7 +262,7 @@
           "path": "System Hive:\\CurrentControlSet\\Enum\\USBSTOR\\Ven_Prod_Version\\USBSerial#\\Properties\\{83da6326-97a6-4088-9453-a19231573b29\\0066"
         },
         {
-          "name": "Removal times",
+          "name": "Removal time",
           "path": "System Hive:\\CurrentControlSet\\Enum\\USBSTOR\\Ven_Prod_Version\\USBSerial#\\Properties\\{83da6326-97a6-4088-9453-a19231573b29\\0067"
         },
         {
@@ -390,7 +394,7 @@
           {
             "name":"Open/Save MRU",
             "description": "tracks files that have been opened or saved within a Windows shell dialog box",
-            "times":"Openend on",
+            "time":"Openend on",
             "path":"NTUSER.DAT\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\ComDlg32\\OpenSavePIDlMRU"
           },
           {
