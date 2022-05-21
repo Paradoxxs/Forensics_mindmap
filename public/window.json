@@ -28,12 +28,14 @@
           {
             "name": "System Resource Usage Monitor(SRUM)",
             "description" : "Records 30 to 60 days of historical system performance",
-            "path": "SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\SRUM\\Extensions {d10ca2fe-6fcf4f6d-848e-b2e99266fa89} = Application Resource Usage Provider C:\\Windows\\System32\\SRU\\"
+            "tool":"scrum_dump.exe",
+            "path": "SOFTWARE\\Microsoft\\WindowsNT\\CurrentVersion\\SRUM\\Extensions {d10ca2fe-6fcf4f6d-848e-b2e99266fa89} = Application Resource Usage Provider C:\\Windows\\System32\\SRU\\*"
           },
           {
             "name": "Jump lists",
             "description" : "https://dfir.to/EZjumpList",
-            "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations"
+            "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations",
+            "time":"First time executed = creation time, last time executed of application w/file open = modification time"
           },
           {
             "name": "Last-Visited MRU",
@@ -165,7 +167,8 @@
           {
             "name": "Jump lists",
             "description" : "https://dfir.to/EZjumpList",
-            "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations"
+            "path": "C:\\%USERPROFILE%\\AppData\\Roaming\\Microsoft\\Windows\\Recent\\AutomaticDestinations",
+            "time":"First time executed = creation time, last time executed of application w/file open = modification time"
           },
           {
             "name":"Open/Save MRU",

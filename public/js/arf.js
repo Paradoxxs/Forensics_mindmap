@@ -191,6 +191,24 @@ function Blockchain() {
   });
 } 
 
+function cloud() {
+  d3.json("cloud.json", function(json) {
+    root = json;
+    root.x0 = height / 2;
+    root.y0 = 0;
+  
+    function collapse(d) {
+      if (d.children) {
+        d._children = d.children;
+        d._children.forEach(collapse);
+        d.children = null;
+      }
+    }
+  
+    root.children.forEach(collapse);
+    update(root);
+  });
+} 
 
 function update(source) {
 
